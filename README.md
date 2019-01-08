@@ -38,9 +38,10 @@ Andrej Rosano   <andrej@inversepath.com>
 Firmware
 ========
 
-The FPGA can be programmed, over USB, by placing a jumper on the JP1 connector
-(upper left corner). The jumper must be then removed and the board restarted to
-allow Ethernet PHY reconfiguration and firmware startup.
+The on-board Lattice Semiconductor MachXO2 FPGA (P/N LCMXO2-1200HC-4SG32C) can
+be programmed, over USB, by placing a jumper on the JP1 connector located on
+the upper left corner. The jumper must be then removed and the board restarted
+to allow Ethernet PHY reconfiguration and firmware startup.
 
 The `firmware` directory contains a Lattice Diamond project file for a basic
 packet transmission tool named file2cable to honour FX's homonym tool, part of
