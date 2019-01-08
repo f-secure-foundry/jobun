@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name jobun)(type KiCad)(uri $KIPRJMOD/lib)(options "")(descr ""))
+  (lib (name snapeda)(type KiCad)(uri $KIPRJMOD/lib.snapeda)(options "")(descr ""))
+)

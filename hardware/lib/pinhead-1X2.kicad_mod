@@ -1,0 +1,13 @@
+(module pinhead-1X2 (layer F.Cu) (tedit 5BF2EAD7)
+  (descr "PIN HEADER - 0.1\"")
+  (tags "PIN HEADER - 0.1\"")
+  (attr virtual)
+  (fp_text reference JP1 (at 0.0635 -1.5875) (layer F.SilkS) hide
+    (effects (font (size 1.27 1.27) (thickness 0.0889)))
+  )
+  (fp_text value Jumper (at 0.0635 1.4605) (layer F.SilkS) hide
+    (effects (font (size 1.27 1.27) (thickness 0.0889)))
+  )
+  (pad 1 thru_hole circle (at -1.23 0.02) (size 1.524 1.524) (drill 1.016) (layers *.Cu *.Paste *.SilkS *.Mask))
+  (pad 2 thru_hole circle (at 1.31 0.02) (size 1.524 1.524) (drill 1.016) (layers *.Cu *.Paste *.SilkS *.Mask))
+)

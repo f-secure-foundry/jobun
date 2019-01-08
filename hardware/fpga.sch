@@ -1,0 +1,787 @@
+EESchema Schematic File Version 4
+LIBS:jobun-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 5
+Title "jobun"
+Date "2019-01-08"
+Rev "Mk I"
+Comp "F-Secure | Inverse Path"
+Comment1 "Copyright © F-Secure Corporation"
+Comment2 "License: CERN OHL v1.2"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L jobun:LCMXO2-1200HC-4SG32C U3
+U 1 1 5B4800AB
+P 3400 4050
+F 0 "U3" H 3150 5000 60  0000 C CNN
+F 1 "LCMXO2-1200HC-4SG32C" H 3100 5150 60  0000 C CNN
+F 2 "jobun:SG32C" H 3000 3950 60  0001 C CNN
+F 3 "" H 3000 3950 60  0001 C CNN
+F 4 "Lattice Semiconductor" H 3400 4050 50  0001 C CNN "Mfg"
+F 5 "LCMXO2-1200HC-4SG32C" H 3400 4050 50  0001 C CNN "Mfg PN"
+F 6 "FPGA" H 3400 4050 50  0001 C CNN "Desc"
+F 7 "Digikey" H 3400 4050 50  0001 C CNN "Supplier"
+F 8 "LCMXO2-1200HC-4SG32C-ND" H 3400 4050 50  0001 C CNN "Supplier PN"
+	1    3400 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 3750 2000 3750
+Wire Wire Line
+	2000 4350 1300 4350
+Wire Wire Line
+	2000 4050 1300 4050
+Wire Wire Line
+	1300 4650 2000 4650
+Text HLabel 1400 5250 0    60   Output ~ 0
+UART_RX
+Text HLabel 1400 5550 0    60   Input ~ 0
+UART_TX
+Wire Wire Line
+	1400 5250 2000 5250
+Wire Wire Line
+	1400 5550 2000 5550
+Text HLabel 5100 2950 2    60   Output ~ 0
+TX_EN
+Text HLabel 5100 2750 2    60   Input ~ 0
+TX_CLK
+Text HLabel 5100 3350 2    60   Output ~ 0
+TX_D0
+Text HLabel 5100 3150 2    60   Output ~ 0
+TX_D1
+Text HLabel 5100 4750 2    60   Output ~ 0
+TX_D2
+Text HLabel 5100 4550 2    60   Output ~ 0
+TX_D3
+Text HLabel 5100 3550 2    60   Input ~ 0
+RX_CLK
+$Comp
+L power:GND #PWR017
+U 1 1 5B488B47
+P 3400 6700
+F 0 "#PWR017" H 3400 6450 50  0001 C CNN
+F 1 "GND" H 3400 6550 50  0000 C CNN
+F 2 "" H 3400 6700 50  0001 C CNN
+F 3 "" H 3400 6700 50  0001 C CNN
+	1    3400 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 6250 3300 6500
+Wire Wire Line
+	3500 6500 3500 6250
+Text GLabel 1400 1700 0    60   Input ~ 0
+3V3
+Wire Wire Line
+	4100 1700 4100 2050
+Wire Wire Line
+	3900 2050 3900 1700
+Connection ~ 3900 1700
+Wire Wire Line
+	3700 2050 3700 1700
+Connection ~ 3700 1700
+Wire Wire Line
+	3500 2050 3500 1700
+Connection ~ 3500 1700
+Wire Wire Line
+	3300 2050 3300 1700
+Connection ~ 3300 1700
+Wire Wire Line
+	3100 2050 3100 1700
+Connection ~ 3100 1700
+Wire Wire Line
+	2900 2050 2900 1700
+Connection ~ 2900 1700
+Wire Wire Line
+	2700 2050 2700 1700
+Connection ~ 2700 1700
+Wire Wire Line
+	3900 1700 4100 1700
+Wire Wire Line
+	3700 1700 3900 1700
+Wire Wire Line
+	3500 1700 3700 1700
+Wire Wire Line
+	3300 1700 3500 1700
+Wire Wire Line
+	3100 1700 3300 1700
+Wire Wire Line
+	2900 1700 3100 1700
+Wire Wire Line
+	2700 1700 2900 1700
+Wire Wire Line
+	7150 1050 7150 1150
+Wire Wire Line
+	7150 1050 7450 1050
+Wire Wire Line
+	7450 1050 7450 1150
+Connection ~ 7450 1050
+Wire Wire Line
+	7750 1050 7750 1150
+Connection ~ 7750 1050
+$Comp
+L power:GND #PWR?
+U 1 1 5B511404
+P 9850 1650
+AR Path="/5B474973/5B511404" Ref="#PWR?"  Part="1" 
+AR Path="/5B47B096/5B511404" Ref="#PWR033"  Part="1" 
+F 0 "#PWR033" H 9850 1400 50  0001 C CNN
+F 1 "GND" H 9850 1500 50  0000 C CNN
+F 2 "" H 9850 1650 50  0001 C CNN
+F 3 "" H 9850 1650 50  0001 C CNN
+	1    9850 1650
+	1    0    0    -1  
+$EndComp
+Text Label 6800 1050 0    60   ~ 0
+3V3
+Text Notes 8150 1750 0    39   ~ 0
+Place near VCCIO and VCC pins
+Wire Wire Line
+	8050 1050 8050 1150
+Connection ~ 8050 1050
+Wire Wire Line
+	7450 1050 7750 1050
+Wire Wire Line
+	7750 1050 8050 1050
+Wire Wire Line
+	8050 1050 8350 1050
+Text Label 1550 1700 0    60   ~ 0
+3V3
+Wire Wire Line
+	8350 1050 8350 1150
+Connection ~ 8350 1050
+Wire Wire Line
+	8350 1050 8650 1050
+Wire Wire Line
+	8650 1150 8650 1050
+Connection ~ 8650 1050
+Wire Wire Line
+	8650 1050 8950 1050
+Wire Wire Line
+	8950 1150 8950 1050
+Connection ~ 8950 1050
+Wire Wire Line
+	8950 1050 9250 1050
+Wire Wire Line
+	9250 1150 9250 1050
+Connection ~ 9250 1050
+Wire Wire Line
+	9250 1050 9550 1050
+Wire Wire Line
+	9550 1150 9550 1050
+Connection ~ 9550 1050
+Wire Wire Line
+	9550 1050 9850 1050
+Wire Wire Line
+	9850 1150 9850 1050
+Wire Wire Line
+	9850 1450 9850 1550
+Wire Wire Line
+	9850 1550 9550 1550
+Wire Wire Line
+	9550 1450 9550 1550
+Connection ~ 9550 1550
+Text HLabel 5100 5550 2    60   Input ~ 0
+RX_DV
+Text HLabel 5100 4950 2    60   Input ~ 0
+RX_ER
+Text HLabel 5100 5150 2    60   Input ~ 0
+COL
+Text HLabel 5100 5350 2    60   Input ~ 0
+CRS
+Text HLabel 5100 3750 2    60   Input ~ 0
+RX_D3
+Text HLabel 5100 3950 2    60   Input ~ 0
+RX_D2
+Text HLabel 5100 4150 2    60   Input ~ 0
+RX_D1
+Text HLabel 5100 4350 2    60   Input ~ 0
+RX_D0
+Wire Wire Line
+	1400 1700 2700 1700
+Wire Wire Line
+	1300 3450 2000 3450
+Text Label 1300 3450 0    60   ~ 0
+JTAGENB
+$Comp
+L power:GND #PWR032
+U 1 1 5B56541F
+P 9400 3700
+F 0 "#PWR032" H 9400 3450 50  0001 C CNN
+F 1 "GND" H 9400 3550 50  0000 C CNN
+F 2 "" H 9400 3700 50  0001 C CNN
+F 3 "" H 9400 3700 50  0001 C CNN
+	1    9400 3700
+	1    0    0    -1  
+$EndComp
+Connection ~ 9400 3200
+Wire Wire Line
+	9400 3200 9400 3300
+Text Label 9600 3200 0    60   ~ 0
+JTAGENB
+Wire Wire Line
+	9400 2300 10000 2300
+Text Label 9800 2300 0    60   ~ 0
+3V3
+Text Notes 5600 4150 0    50   ~ 0
+MII interface\n15 signals
+Text Notes 700  4600 0    50   ~ 0
+Serial\nManagement\nInterface
+Text Label 1300 3750 0    60   ~ 0
+LED_TCK
+Text Label 1300 4050 0    60   ~ 0
+INT_PWDN_TMS
+Text Label 1300 4350 0    60   ~ 0
+MDC_TDI
+Text Label 1300 4650 0    60   ~ 0
+MDIO_TDO
+Wire Wire Line
+	4800 2750 5100 2750
+Wire Wire Line
+	5100 2950 4800 2950
+Wire Wire Line
+	4800 3150 5100 3150
+Wire Wire Line
+	5100 3350 4800 3350
+Wire Wire Line
+	4800 3550 5100 3550
+Wire Wire Line
+	5100 3750 4800 3750
+Wire Wire Line
+	4800 3950 5100 3950
+Wire Wire Line
+	5100 4150 4800 4150
+Wire Wire Line
+	4800 4350 5100 4350
+Wire Wire Line
+	5100 4550 4800 4550
+Wire Wire Line
+	5100 4750 4800 4750
+Wire Wire Line
+	5100 4950 4800 4950
+Wire Wire Line
+	5100 5150 4800 5150
+Wire Wire Line
+	5100 5350 4800 5350
+Wire Wire Line
+	5100 5550 4800 5550
+$Comp
+L snapeda:TS3A44159PWR U6
+U 1 1 5B5A4135
+P 8400 5100
+F 0 "U6" H 8400 5870 50  0000 C CNN
+F 1 "TS3A44159PWR" H 8400 5779 50  0000 C CNN
+F 2 "snapeda:TS3A44159PWR" H 8400 5100 50  0001 L BNN
+F 3 "TS3A44159PWR" H 8400 5100 50  0001 L BNN
+F 4 "Texas Instruments" H 8400 5100 50  0001 C CNN "Mfg"
+F 5 "TS3A44159PWR" H 8400 5100 50  0001 C CNN "Mfg PN"
+F 6 "SWITCH QUAD SPDT" H 8400 5100 50  0001 C CNN "Desc"
+F 7 "Digikey" H 8400 5100 50  0001 C CNN "Supplier"
+F 8 "296-21915-1-ND" H 8400 5100 50  0001 C CNN "Supplier PN"
+	1    8400 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 5200 7700 5200
+Wire Wire Line
+	7700 5400 7000 5400
+Wire Wire Line
+	7700 5300 7000 5300
+Wire Wire Line
+	7000 5500 7700 5500
+Text Label 7000 5200 0    60   ~ 0
+LED_TCK
+Text Label 7000 5300 0    60   ~ 0
+INT_PWDN_TMS
+Text Label 7000 5400 0    60   ~ 0
+MDC_TDI
+Text Label 7000 5500 0    60   ~ 0
+MDIO_TDO
+$Comp
+L power:GND #PWR031
+U 1 1 5B5B0AF6
+P 7600 5900
+F 0 "#PWR031" H 7600 5650 50  0001 C CNN
+F 1 "GND" H 7600 5750 50  0000 C CNN
+F 2 "" H 7600 5900 50  0001 C CNN
+F 3 "" H 7600 5900 50  0001 C CNN
+	1    7600 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 5700 7600 5700
+Wire Wire Line
+	7600 5700 7600 5900
+Text Label 9500 4700 0    60   ~ 0
+TCK
+Text Label 9500 4800 0    60   ~ 0
+TMS
+Text Label 9500 4900 0    60   ~ 0
+TDI
+Text Label 9500 5000 0    60   ~ 0
+TDO
+Text Label 9450 5400 0    60   ~ 0
+MDC
+Text Label 9450 5500 0    60   ~ 0
+MDIO
+Text HLabel 9700 4700 2    60   Input ~ 0
+TCK
+Text HLabel 9700 4800 2    60   Input ~ 0
+TMS
+Text HLabel 9700 4900 2    60   Input ~ 0
+TDI
+Text HLabel 9700 5000 2    60   Output ~ 0
+TDO
+Text Label 9250 5300 0    60   ~ 0
+INT_PWDN
+Text HLabel 9700 5400 2    60   Output ~ 0
+MDC
+Text HLabel 9700 5500 2    60   BiDi ~ 0
+MDIO
+Text HLabel 9700 5300 2    60   Output ~ 0
+INT_PWDN
+Text Label 6400 4700 0    60   ~ 0
+3V3
+Wire Wire Line
+	7700 4900 7450 4900
+Wire Wire Line
+	7700 5000 7450 5000
+Wire Wire Line
+	7450 5000 7450 4900
+Connection ~ 7450 4900
+Wire Wire Line
+	7450 4900 7000 4900
+Text Label 7000 4900 0    60   ~ 0
+JTAGENB
+Text Notes 8500 6150 0    60   ~ 0
+IN = L  =>  COM <-> NC\nIN = H  =>  COM <-> NO
+Text Label 6950 3100 0    60   ~ 0
+3V3
+Text Label 8250 3100 0    60   ~ 0
+LED
+$Comp
+L Device:Jumper JP1
+U 1 1 5B5DA2E3
+P 9400 2800
+F 0 "JP1" V 9446 2712 50  0000 R CNN
+F 1 "Jumper" V 9355 2712 50  0000 R CNN
+F 2 "jobun:pinhead-1X2" H 9400 2800 50  0001 C CNN
+F 3 "~" H 9400 2800 50  0001 C CNN
+	1    9400 2800
+	0    -1   -1   0   
+$EndComp
+Connection ~ 8950 1550
+Wire Wire Line
+	8950 1450 8950 1550
+Wire Wire Line
+	9550 1550 9250 1550
+Wire Wire Line
+	9250 1550 8950 1550
+Connection ~ 9250 1550
+Wire Wire Line
+	9250 1450 9250 1550
+Wire Wire Line
+	8950 1550 8650 1550
+Connection ~ 8650 1550
+Wire Wire Line
+	8650 1450 8650 1550
+Wire Wire Line
+	8650 1550 8350 1550
+Connection ~ 8350 1550
+Wire Wire Line
+	8350 1450 8350 1550
+Wire Wire Line
+	8350 1550 8050 1550
+Connection ~ 8050 1550
+Wire Wire Line
+	8050 1550 8050 1450
+Wire Wire Line
+	7150 1450 7150 1550
+Wire Wire Line
+	7150 1550 7450 1550
+Connection ~ 7450 1550
+Wire Wire Line
+	7450 1550 7450 1450
+Wire Wire Line
+	7750 1550 8050 1550
+Wire Wire Line
+	7450 1550 7750 1550
+Connection ~ 7750 1550
+Wire Wire Line
+	7750 1550 7750 1450
+$Comp
+L Device:C C?
+U 1 1 5B8D46D7
+P 7150 1300
+AR Path="/5B474973/5B8D46D7" Ref="C?"  Part="1" 
+AR Path="/5B47B096/5B8D46D7" Ref="C17"  Part="1" 
+F 0 "C17" H 7175 1400 50  0000 L CNN
+F 1 "0.1 uF" H 7175 1200 50  0000 L CNN
+F 2 "jobun:SM0603" H 7188 1150 50  0001 C CNN
+F 3 "~" H 7150 1300 50  0001 C CNN
+F 4 "X7R, 25V, 10%" H 7150 1300 60  0001 C CNN "Desc"
+F 5 "TDK" H 7150 1300 60  0001 C CNN "Mfg"
+F 6 "C1608X7R1E104K080AA" H 7150 1300 60  0001 C CNN "Mfg PN"
+F 7 "Digikey" H 7150 1300 60  0001 C CNN "Supplier"
+F 8 "445-1316-2-ND" H 7150 1300 60  0001 C CNN "Supplier PN"
+	1    7150 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5B8D4747
+P 7450 1300
+AR Path="/5B474973/5B8D4747" Ref="C?"  Part="1" 
+AR Path="/5B47B096/5B8D4747" Ref="C18"  Part="1" 
+F 0 "C18" H 7475 1400 50  0000 L CNN
+F 1 "0.1 uF" H 7475 1200 50  0000 L CNN
+F 2 "jobun:SM0603" H 7488 1150 50  0001 C CNN
+F 3 "~" H 7450 1300 50  0001 C CNN
+F 4 "X7R, 25V, 10%" H 7450 1300 60  0001 C CNN "Desc"
+F 5 "TDK" H 7450 1300 60  0001 C CNN "Mfg"
+F 6 "C1608X7R1E104K080AA" H 7450 1300 60  0001 C CNN "Mfg PN"
+F 7 "Digikey" H 7450 1300 60  0001 C CNN "Supplier"
+F 8 "445-1316-2-ND" H 7450 1300 60  0001 C CNN "Supplier PN"
+	1    7450 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5B8D47F2
+P 7750 1300
+AR Path="/5B474973/5B8D47F2" Ref="C?"  Part="1" 
+AR Path="/5B47B096/5B8D47F2" Ref="C20"  Part="1" 
+F 0 "C20" H 7775 1400 50  0000 L CNN
+F 1 "0.1 uF" H 7775 1200 50  0000 L CNN
+F 2 "jobun:SM0603" H 7788 1150 50  0001 C CNN
+F 3 "~" H 7750 1300 50  0001 C CNN
+F 4 "X7R, 25V, 10%" H 7750 1300 60  0001 C CNN "Desc"
+F 5 "TDK" H 7750 1300 60  0001 C CNN "Mfg"
+F 6 "C1608X7R1E104K080AA" H 7750 1300 60  0001 C CNN "Mfg PN"
+F 7 "Digikey" H 7750 1300 60  0001 C CNN "Supplier"
+F 8 "445-1316-2-ND" H 7750 1300 60  0001 C CNN "Supplier PN"
+	1    7750 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5B8D47FD
+P 8050 1300
+AR Path="/5B474973/5B8D47FD" Ref="C?"  Part="1" 
+AR Path="/5B47B096/5B8D47FD" Ref="C22"  Part="1" 
+F 0 "C22" H 8075 1400 50  0000 L CNN
+F 1 "0.1 uF" H 8075 1200 50  0000 L CNN
+F 2 "jobun:SM0603" H 8088 1150 50  0001 C CNN
+F 3 "~" H 8050 1300 50  0001 C CNN
+F 4 "X7R, 25V, 10%" H 8050 1300 60  0001 C CNN "Desc"
+F 5 "TDK" H 8050 1300 60  0001 C CNN "Mfg"
+F 6 "C1608X7R1E104K080AA" H 8050 1300 60  0001 C CNN "Mfg PN"
+F 7 "Digikey" H 8050 1300 60  0001 C CNN "Supplier"
+F 8 "445-1316-2-ND" H 8050 1300 60  0001 C CNN "Supplier PN"
+	1    8050 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5B8D7BB3
+P 8350 1300
+AR Path="/5B474973/5B8D7BB3" Ref="C?"  Part="1" 
+AR Path="/5B47B096/5B8D7BB3" Ref="C23"  Part="1" 
+F 0 "C23" H 8375 1400 50  0000 L CNN
+F 1 "0.1 uF" H 8375 1200 50  0000 L CNN
+F 2 "jobun:SM0603" H 8388 1150 50  0001 C CNN
+F 3 "~" H 8350 1300 50  0001 C CNN
+F 4 "X7R, 25V, 10%" H 8350 1300 60  0001 C CNN "Desc"
+F 5 "TDK" H 8350 1300 60  0001 C CNN "Mfg"
+F 6 "C1608X7R1E104K080AA" H 8350 1300 60  0001 C CNN "Mfg PN"
+F 7 "Digikey" H 8350 1300 60  0001 C CNN "Supplier"
+F 8 "445-1316-2-ND" H 8350 1300 60  0001 C CNN "Supplier PN"
+	1    8350 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5B8D7BBE
+P 8650 1300
+AR Path="/5B474973/5B8D7BBE" Ref="C?"  Part="1" 
+AR Path="/5B47B096/5B8D7BBE" Ref="C26"  Part="1" 
+F 0 "C26" H 8675 1400 50  0000 L CNN
+F 1 "0.1 uF" H 8675 1200 50  0000 L CNN
+F 2 "jobun:SM0603" H 8688 1150 50  0001 C CNN
+F 3 "~" H 8650 1300 50  0001 C CNN
+F 4 "X7R, 25V, 10%" H 8650 1300 60  0001 C CNN "Desc"
+F 5 "TDK" H 8650 1300 60  0001 C CNN "Mfg"
+F 6 "C1608X7R1E104K080AA" H 8650 1300 60  0001 C CNN "Mfg PN"
+F 7 "Digikey" H 8650 1300 60  0001 C CNN "Supplier"
+F 8 "445-1316-2-ND" H 8650 1300 60  0001 C CNN "Supplier PN"
+	1    8650 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5B8D7BC9
+P 8950 1300
+AR Path="/5B474973/5B8D7BC9" Ref="C?"  Part="1" 
+AR Path="/5B47B096/5B8D7BC9" Ref="C27"  Part="1" 
+F 0 "C27" H 8975 1400 50  0000 L CNN
+F 1 "0.1 uF" H 8975 1200 50  0000 L CNN
+F 2 "jobun:SM0603" H 8988 1150 50  0001 C CNN
+F 3 "~" H 8950 1300 50  0001 C CNN
+F 4 "X7R, 25V, 10%" H 8950 1300 60  0001 C CNN "Desc"
+F 5 "TDK" H 8950 1300 60  0001 C CNN "Mfg"
+F 6 "C1608X7R1E104K080AA" H 8950 1300 60  0001 C CNN "Mfg PN"
+F 7 "Digikey" H 8950 1300 60  0001 C CNN "Supplier"
+F 8 "445-1316-2-ND" H 8950 1300 60  0001 C CNN "Supplier PN"
+	1    8950 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5B8D7BD4
+P 9250 1300
+AR Path="/5B474973/5B8D7BD4" Ref="C?"  Part="1" 
+AR Path="/5B47B096/5B8D7BD4" Ref="C28"  Part="1" 
+F 0 "C28" H 9275 1400 50  0000 L CNN
+F 1 "0.1 uF" H 9275 1200 50  0000 L CNN
+F 2 "jobun:SM0603" H 9288 1150 50  0001 C CNN
+F 3 "~" H 9250 1300 50  0001 C CNN
+F 4 "X7R, 25V, 10%" H 9250 1300 60  0001 C CNN "Desc"
+F 5 "TDK" H 9250 1300 60  0001 C CNN "Mfg"
+F 6 "C1608X7R1E104K080AA" H 9250 1300 60  0001 C CNN "Mfg PN"
+F 7 "Digikey" H 9250 1300 60  0001 C CNN "Supplier"
+F 8 "445-1316-2-ND" H 9250 1300 60  0001 C CNN "Supplier PN"
+	1    9250 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5B8DED2B
+P 9850 1300
+AR Path="/5B481F6B/5B8DED2B" Ref="C?"  Part="1" 
+AR Path="/5B47B096/5B8DED2B" Ref="C30"  Part="1" 
+F 0 "C30" H 9875 1400 50  0000 L CNN
+F 1 "10uF" H 9875 1200 50  0000 L CNN
+F 2 "jobun:SM0603" H 9888 1150 50  0001 C CNN
+F 3 "~" H 9850 1300 50  0001 C CNN
+F 4 "TDK" H 9850 1300 60  0001 C CNN "Mfg"
+F 5 "C1608X5R1A106M080AC" H 9850 1300 60  0001 C CNN "Mfg PN"
+F 6 "X5R, 10V, 20%" H 9850 1300 60  0001 C CNN "Desc"
+F 7 "Digikey" H 9850 1300 60  0001 C CNN "Supplier"
+F 8 "445-6853-1-ND" H 9850 1300 60  0001 C CNN "Supplier PN"
+	1    9850 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5B8E536B
+P 9550 1300
+AR Path="/5B481F6B/5B8E536B" Ref="C?"  Part="1" 
+AR Path="/5B47B096/5B8E536B" Ref="C29"  Part="1" 
+F 0 "C29" H 9575 1400 50  0000 L CNN
+F 1 "10uF" H 9575 1200 50  0000 L CNN
+F 2 "jobun:SM0603" H 9588 1150 50  0001 C CNN
+F 3 "~" H 9550 1300 50  0001 C CNN
+F 4 "TDK" H 9550 1300 60  0001 C CNN "Mfg"
+F 5 "C1608X5R1A106M080AC" H 9550 1300 60  0001 C CNN "Mfg PN"
+F 6 "X5R, 10V, 20%" H 9550 1300 60  0001 C CNN "Desc"
+F 7 "Digikey" H 9550 1300 60  0001 C CNN "Supplier"
+F 8 "445-6853-1-ND" H 9550 1300 60  0001 C CNN "Supplier PN"
+	1    9550 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 1050 6700 1050
+Connection ~ 7150 1050
+Wire Wire Line
+	9850 1550 9850 1650
+Connection ~ 9850 1550
+Wire Wire Line
+	3300 6500 3400 6500
+Wire Wire Line
+	3500 6500 3400 6500
+Connection ~ 3400 6500
+Wire Wire Line
+	3400 6500 3400 6700
+$Comp
+L Device:LED D1
+U 1 1 5B9244AA
+P 7900 3100
+F 0 "D1" H 7892 3316 50  0000 C CNN
+F 1 "RED" H 7892 3225 50  0000 C CNN
+F 2 "jobun:SM0603" H 7900 3100 50  0001 C CNN
+F 3 "~" H 7900 3100 50  0001 C CNN
+F 4 "Lite-On" H 7900 3100 50  0001 C CNN "Mfg"
+F 5 "LTST-C190KRKT" H 7900 3100 50  0001 C CNN "Mfg PN"
+F 6 "LED RED, 2V, 20mA" H 7900 3100 50  0001 C CNN "Desc"
+F 7 "Digikey" H 7900 3100 50  0001 C CNN "Supplier"
+F 8 "160-1436-1-ND" H 7900 3100 50  0001 C CNN "Supplier PN"
+	1    7900 3100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 3100 7750 3100
+Wire Wire Line
+	7200 3100 6950 3100
+Wire Wire Line
+	8050 3100 8400 3100
+$Comp
+L Device:R R?
+U 1 1 5B94584C
+P 7350 3100
+AR Path="/5B474973/5B94584C" Ref="R?"  Part="1" 
+AR Path="/5B47B096/5B94584C" Ref="R13"  Part="1" 
+F 0 "R13" V 7430 3100 50  0000 C CNN
+F 1 "1k" V 7350 3100 50  0000 C CNN
+F 2 "jobun:SM0603" V 7280 3100 50  0001 C CNN
+F 3 "~" H 7350 3100 50  0001 C CNN
+F 4 "1%, 250mW" V 7350 3100 60  0001 C CNN "Desc"
+F 5 "Vishay" V 7350 3100 60  0001 C CNN "Mfg"
+F 6 "RCA06031K00FKEAHP" V 7350 3100 60  0001 C CNN "Mfg PN"
+F 7 "Digikey" V 7350 3100 60  0001 C CNN "Supplier"
+F 8 "541-3245-1-ND" V 7350 3100 60  0001 C CNN "Supplier PN"
+	1    7350 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5B953449
+P 9400 3450
+AR Path="/5B474973/5B953449" Ref="R?"  Part="1" 
+AR Path="/5B47B096/5B953449" Ref="R14"  Part="1" 
+F 0 "R14" V 9480 3450 50  0000 C CNN
+F 1 "2.2k" V 9400 3450 50  0000 C CNN
+F 2 "jobun:SM0603" V 9330 3450 50  0001 C CNN
+F 3 "~" H 9400 3450 50  0001 C CNN
+F 4 "5%, 250mW" V 9400 3450 60  0001 C CNN "Desc"
+F 5 "Vishay" V 9400 3450 60  0001 C CNN "Mfg"
+F 6 "RCS06032K20JNEA" V 9400 3450 60  0001 C CNN "Mfg PN"
+F 7 "Digikey" V 9400 3450 60  0001 C CNN "Supplier"
+F 8 "541-2815-1-ND" V 9400 3450 60  0001 C CNN "Supplier PN"
+	1    9400 3450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5B96BF5F
+P 6700 4950
+AR Path="/5B474973/5B96BF5F" Ref="C?"  Part="1" 
+AR Path="/5B47B096/5B96BF5F" Ref="C16"  Part="1" 
+F 0 "C16" H 6725 5050 50  0000 L CNN
+F 1 "0.1 uF" H 6725 4850 50  0000 L CNN
+F 2 "jobun:SM0603" H 6738 4800 50  0001 C CNN
+F 3 "~" H 6700 4950 50  0001 C CNN
+F 4 "X7R, 25V, 10%" H 6700 4950 60  0001 C CNN "Desc"
+F 5 "TDK" H 6700 4950 60  0001 C CNN "Mfg"
+F 6 "C1608X7R1E104K080AA" H 6700 4950 60  0001 C CNN "Mfg PN"
+F 7 "Digikey" H 6700 4950 60  0001 C CNN "Supplier"
+F 8 "445-1316-2-ND" H 6700 4950 60  0001 C CNN "Supplier PN"
+	1    6700 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 4700 6700 4700
+Wire Wire Line
+	6700 4700 6700 4800
+Connection ~ 6700 4700
+Wire Wire Line
+	6700 4700 7700 4700
+Wire Wire Line
+	6700 5100 6700 5900
+$Comp
+L power:GND #PWR030
+U 1 1 5B976152
+P 6700 5900
+F 0 "#PWR030" H 6700 5650 50  0001 C CNN
+F 1 "GND" H 6700 5750 50  0000 C CNN
+F 2 "" H 6700 5900 50  0001 C CNN
+F 3 "" H 6700 5900 50  0001 C CNN
+	1    6700 5900
+	1    0    0    -1  
+$EndComp
+Text Notes 6200 5000 0    60   ~ 0
+Place\nnear V+
+Wire Wire Line
+	9400 3100 9400 3200
+Wire Wire Line
+	9400 2300 9400 2500
+Wire Wire Line
+	9400 3600 9400 3700
+Wire Wire Line
+	9400 3200 10000 3200
+Connection ~ 3500 6500
+Wire Wire Line
+	3500 6500 3700 6500
+Wire Wire Line
+	3700 6500 3700 6250
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5BF77052
+P 9850 4200
+F 0 "J4" V 9816 4012 50  0000 R CNN
+F 1 "Conn_01x02" V 9725 4012 50  0000 R CNN
+F 2 "jobun:pinhead-1X2" H 9850 4200 50  0001 C CNN
+F 3 "~" H 9850 4200 50  0001 C CNN
+	1    9850 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 5BF7AA16
+P 9100 4200
+F 0 "J3" V 9066 4012 50  0000 R CNN
+F 1 "Conn_01x02" V 8975 4012 50  0000 R CNN
+F 2 "jobun:pinhead-1X2" H 9100 4200 50  0001 C CNN
+F 3 "~" H 9100 4200 50  0001 C CNN
+	1    9100 4200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9100 4700 9700 4700
+Wire Wire Line
+	9100 5500 9700 5500
+Wire Wire Line
+	9100 5400 9700 5400
+Wire Wire Line
+	9100 5300 9700 5300
+Wire Wire Line
+	9100 4400 9100 4700
+Connection ~ 9100 4700
+Wire Wire Line
+	9850 4500 9850 4400
+Wire Wire Line
+	9950 4600 9950 4400
+Text Label 9500 5200 0    60   ~ 0
+LED
+Wire Wire Line
+	9700 5200 9100 5200
+Wire Wire Line
+	9100 4800 9400 4800
+Wire Wire Line
+	9100 4900 9200 4900
+Wire Wire Line
+	9100 5000 9300 5000
+Wire Wire Line
+	9200 4400 9200 4900
+Connection ~ 9200 4900
+Wire Wire Line
+	9200 4900 9700 4900
+Wire Wire Line
+	9300 5000 9300 4500
+Wire Wire Line
+	9300 4500 9850 4500
+Connection ~ 9300 5000
+Wire Wire Line
+	9300 5000 9700 5000
+Wire Wire Line
+	9400 4800 9400 4600
+Wire Wire Line
+	9400 4600 9950 4600
+Connection ~ 9400 4800
+Wire Wire Line
+	9400 4800 9700 4800
+$EndSCHEMATC

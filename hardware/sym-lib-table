@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name snapeda)(type Legacy)(uri ${KIPRJMOD}/lib.snapeda/snapeda.lib)(options "")(descr ""))
+  (lib (name jobun)(type Legacy)(uri ${KIPRJMOD}/lib/jobun.lib)(options "")(descr ""))
+)
