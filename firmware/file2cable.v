@@ -1,7 +1,13 @@
+// This should match the line count of mac_pkt.txt
 `define PKT_SIZE 1116
 
-//`define INTERPACKET_GAP 15 // for 10 Mbit
-`define INTERPACKET_GAP 100  // for 100 Mbit (min tested 10 but with glitches)
+// FIXME: move away from statically included mac_pkt.txt file and rather
+// receive packet information directly over serial.
+
+// The minimum Inter-Packet Gap (IPG) is the time it takes to transmit 96 bits
+// of data (Table 4-2 - Std 802.3-2008). The gap counter is therefore set to 96
+// divided by a nibble (4 bits, transmitted at each cycle).
+`define IPG 24
 
 module file2cable (
    output reg LED,
@@ -19,11 +25,11 @@ module file2cable (
 );
 
 wire       clk_i;
-reg [31:0] cnt1;
-reg [7:0]  cnt2;
-reg [31:0] cnt3;
-reg [31:0] cnt4;
-reg [7:0]  rom[`PKT_SIZE-1:0];
+reg [31:0] cnt_led;
+reg [7:0]  cnt_bit;
+reg [31:0] cnt_oct;
+reg [31:0] cnt_gap;
+reg [7:0]  pkt[`PKT_SIZE-1:0];
 
 defparam OSCH_inst.NOM_FREQ = "2.08";
    OSCH OSCH_inst
@@ -36,10 +42,10 @@ defparam OSCH_inst.NOM_FREQ = "2.08";
 initial begin
    LED <= ~1'b1;
 
-   cnt1 = 0;
-   cnt2 = 0;
-   cnt3 = 0;
-   cnt4 = 0;
+   cnt_led = 0;
+   cnt_bit = 0;
+   cnt_oct = 0;
+   cnt_gap = 0;
 
    TX_EN    <= 1'b1;
    TXD0     <= 0;
@@ -48,50 +54,52 @@ initial begin
    TXD3     <= 0;
    INT_PWDN <= 0;
 
-   $readmemh("mac_pkt.txt", rom, 0, `PKT_SIZE-1);
+   $readmemh("mac_pkt.txt", pkt, 0, `PKT_SIZE-1);
 end
 
 always @(posedge clk_i) begin
-   cnt1 <= cnt1 + 1;
+   cnt_led <= cnt_led + 1;
 
    INT_PWDN <= 1;
-   // Forcing to high level as they are used for PHY bootstrapping
-   // and if unused are pulled-down.
-   // FIXME: understand how to configure unused pin in high-z mode
+
+   // We force to high level as these connections are used for PHY
+   // bootstrapping and, if unused, are pulled-down.
+   //
+   // FIXME: understand how to configure unused pins in high-z mode.
    RX_ER <= 1;
    COL <= 1;
 
-   if (cnt1 == 300000) begin
+   if (cnt_led == 300000) begin
       LED <= ~LED;
-      cnt1 <= 0;
+      cnt_led <= 0;
    end
 end
 
 always @(negedge TX_CLK) begin
-   if (cnt3 == `PKT_SIZE) begin
+   if (cnt_oct == `PKT_SIZE) begin
       TX_EN <= 1'b0;
       TXD0  <= 1'b0;
       TXD1  <= 1'b0;
       TXD2  <= 1'b0;
       TXD3  <= 1'b0;
 
-      cnt3 <= 0;
-      cnt4 <= `INTERPACKET_GAP;
+      cnt_oct <= 0;
+      cnt_gap <= `IPG+1;
    end
    else begin
-      if (cnt4 == 0) begin
+      if (cnt_gap == 0) begin
          TX_EN <= 1'b1;
-         TXD0  <= rom[cnt3][cnt2+0];
-         TXD1  <= rom[cnt3][cnt2+1];
-         TXD2  <= rom[cnt3][cnt2+2];
-         TXD3  <= rom[cnt3][cnt2+3];
+         TXD0  <= pkt[cnt_oct][cnt_bit+0];
+         TXD1  <= pkt[cnt_oct][cnt_bit+1];
+         TXD2  <= pkt[cnt_oct][cnt_bit+2];
+         TXD3  <= pkt[cnt_oct][cnt_bit+3];
 
-         if (cnt2 == 4) begin
-            cnt2 <= 0;
-            cnt3 <= cnt3 + 1;
+         if (cnt_bit == 4) begin
+            cnt_bit <= 0;
+            cnt_oct <= cnt_oct + 1;
          end
          else begin
-            cnt2 <= 4;
+            cnt_bit <= 4;
          end
       end
       else begin
@@ -101,7 +109,7 @@ always @(negedge TX_CLK) begin
          TXD2  <= 1'b0;
          TXD3  <= 1'b0;
 
-         cnt4 <= cnt4 - 1;
+         cnt_gap <= cnt_gap - 1;
       end
    end
 end
