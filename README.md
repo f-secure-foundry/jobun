@@ -9,6 +9,9 @@ arbitrary Ethernet (802.3u - 100BASE-FX, 100BASETX and 10BASE-Te) packets, by
 means of an FPGA based software Media Access Control (MAC) connected to a
 physical (PHY) Ethernet transceiver.
 
+The FPGA is a Lattice Semiconductor MachXO2 (P/N LCMXO2-1200HC-4SG32C), the
+Ethernet transceiver is a Texas Instruments DP83822.
+
 The PCB features a design that allows to use the FPGA side of the board
 independently of the Ethernet PHY one. A 2.54mm 20x2 pin header must be
 soldered to interconnect the two sides through connection shunts (jumpers).
@@ -38,10 +41,10 @@ Andrej Rosano   <andrej@inversepath.com>
 Firmware
 ========
 
-The on-board Lattice Semiconductor MachXO2 FPGA (P/N LCMXO2-1200HC-4SG32C) can
-be programmed, over USB, by placing a jumper on the JP1 connector located on
-the upper left corner. The jumper must be then removed and the board restarted
-to allow Ethernet PHY reconfiguration and firmware startup.
+The on-board MachXO2 FPGA can be programmed, over USB, by placing a jumper on
+the JP1 connector located on the upper left corner. The jumper must be then
+removed and the board restarted to allow Ethernet PHY reconfiguration and
+firmware startup.
 
 The `firmware` directory contains a Lattice Diamond project file for a basic
 packet transmission tool named file2cable to honour FX's homonym tool, part of
