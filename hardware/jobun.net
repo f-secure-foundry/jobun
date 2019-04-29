@@ -211,7 +211,7 @@
       (fields
         (field (name Desc) "1%, 100mW")
         (field (name Mfg) Vishay)
-        (field (name "Mfg PN") "CRCW060310K0FKEA ")
+        (field (name "Mfg PN") CRCW060310K0FKEA)
         (field (name Supplier) Digikey)
         (field (name "Supplier PN") 541-10.0KHTR-ND))
       (libsource (lib Device) (part R) (description Resistor))
@@ -380,7 +380,7 @@
       (fields
         (field (name Desc) "1%, 100mW")
         (field (name Mfg) Vishay)
-        (field (name "Mfg PN") "CRCW060310K0FKEA ")
+        (field (name "Mfg PN") CRCW060310K0FKEA)
         (field (name Supplier) Digikey)
         (field (name "Supplier PN") 541-10.0KHTR-ND))
       (libsource (lib Device) (part R) (description Resistor))
@@ -393,7 +393,7 @@
       (fields
         (field (name Desc) "1%, 100mW")
         (field (name Mfg) Vishay)
-        (field (name "Mfg PN") "CRCW060310K0FKEA ")
+        (field (name "Mfg PN") CRCW060310K0FKEA)
         (field (name Supplier) Digikey)
         (field (name "Supplier PN") 541-10.0KHTR-ND))
       (libsource (lib Device) (part R) (description Resistor))
@@ -789,7 +789,7 @@
       (fields
         (field (name Desc) "1%, 250mW")
         (field (name Mfg) Vishay)
-        (field (name "Mfg PN") " RCS060375R0FKEA ")
+        (field (name "Mfg PN") RCS060375R0FKEA)
         (field (name Supplier) Digikey)
         (field (name "Supplier PN") 541-2785-1-ND))
       (libsource (lib Device) (part R) (description Resistor))
@@ -1080,7 +1080,7 @@
       (fields
         (field (name Desc) "1%, 250mW")
         (field (name Mfg) Vishay)
-        (field (name "Mfg PN") " RCS060375R0FKEA ")
+        (field (name "Mfg PN") RCS060375R0FKEA)
         (field (name Supplier) Digikey)
         (field (name "Supplier PN") 541-2785-1-ND))
       (libsource (lib Device) (part R) (description Resistor))

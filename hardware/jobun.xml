@@ -246,7 +246,7 @@
       <fields>
         <field name="Desc">1%, 100mW</field>
         <field name="Mfg">Vishay</field>
-        <field name="Mfg PN">CRCW060310K0FKEA </field>
+        <field name="Mfg PN">CRCW060310K0FKEA</field>
         <field name="Supplier">Digikey</field>
         <field name="Supplier PN">541-10.0KHTR-ND</field>
       </fields>
@@ -441,7 +441,7 @@
       <fields>
         <field name="Desc">1%, 100mW</field>
         <field name="Mfg">Vishay</field>
-        <field name="Mfg PN">CRCW060310K0FKEA </field>
+        <field name="Mfg PN">CRCW060310K0FKEA</field>
         <field name="Supplier">Digikey</field>
         <field name="Supplier PN">541-10.0KHTR-ND</field>
       </fields>
@@ -456,7 +456,7 @@
       <fields>
         <field name="Desc">1%, 100mW</field>
         <field name="Mfg">Vishay</field>
-        <field name="Mfg PN">CRCW060310K0FKEA </field>
+        <field name="Mfg PN">CRCW060310K0FKEA</field>
         <field name="Supplier">Digikey</field>
         <field name="Supplier PN">541-10.0KHTR-ND</field>
       </fields>
@@ -912,7 +912,7 @@
       <fields>
         <field name="Desc">1%, 250mW</field>
         <field name="Mfg">Vishay</field>
-        <field name="Mfg PN"> RCS060375R0FKEA </field>
+        <field name="Mfg PN">RCS060375R0FKEA</field>
         <field name="Supplier">Digikey</field>
         <field name="Supplier PN">541-2785-1-ND</field>
       </fields>
@@ -1247,7 +1247,7 @@
       <fields>
         <field name="Desc">1%, 250mW</field>
         <field name="Mfg">Vishay</field>
-        <field name="Mfg PN"> RCS060375R0FKEA </field>
+        <field name="Mfg PN">RCS060375R0FKEA</field>
         <field name="Supplier">Digikey</field>
         <field name="Supplier PN">541-2785-1-ND</field>
       </fields>
