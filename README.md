@@ -16,11 +16,10 @@ The PCB features a design that allows to use the FPGA side of the board
 independently of the Ethernet PHY one. A 2.54mm 20x2 pin header must be
 soldered to interconnect the two sides through connection shunts (jumpers).
 
-With some courage the two sides can also be snapped off each other for fully
+With some courage, the two sides can also be snapped off each other for fully
 independent use.
 
-The board features a micro USB micro-AB receptacle for programming and
-operation.
+The board features a USB micro-AB receptacle for programming and operation.
 
 The jobun design has been initially designed to provide a platform for the
 Start-of-Frame delimiter (SFD) manipulation attacks described in the following
