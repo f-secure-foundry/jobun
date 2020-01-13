@@ -1,7 +1,7 @@
 Introduction
 ============
 
-jobun | https://github.com/inversepath/jobun  
+jobun | https://github.com/f-secure-foundry/jobun  
 Copyright (c) F-Secure Corporation
 
 The jobun (序文) board implements a platform for transmission of truly
@@ -29,13 +29,16 @@ research:
   “Fully Arbitrary 802.3 Packet Injection: Maximizing the Ethernet Attack Surface”  
   [Link](https://github.com/abarisani/abarisani.github.io/tree/master/research/802.3)
 
-![jobun board](https://github.com/inversepath/jobun/wiki/images/mkI-jobun-board.png)
+![jobun board](https://github.com/f-secure-foundry/jobun/wiki/images/mkI-jobun-board.png)
 
 Authors
 =======
 
-Andrea Barisani <andrea@inversepath.com>  
-Andrej Rosano   <andrej@inversepath.com>  
+Andrea Barisani  
+andrea.barisani@f-secure.com | andrea@inversepath.com  
+
+Andrej Rosano  
+andrej.rosano@f-secure.com   | andrej@inversepath.com  
 
 Firmware
 ========
