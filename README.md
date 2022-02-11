@@ -50,7 +50,7 @@ firmware startup.
 
 The `firmware` directory contains a Lattice Diamond project file for a basic
 packet transmission tool named file2cable to honour FX's homonym tool, part of
-the legendary [IRPAS](http://www.phenoelit.org/irpas/docu.html) from Phenoelit.
+the legendary IRPAS from Phenoelit.
 
 While the original IRPAS file2cable tool can be used to transmit a "MAC Frame",
 jobun can send a "MAC Packet" (see paper linked earlier), therefore achieving
